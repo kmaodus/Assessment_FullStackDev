@@ -9,10 +9,6 @@ const Employee = (props) => (
     <td>{props.employee.lastName}</td>
     <td>{props.employee.gender}</td>
     <td>
-      <Link className="btn btn-link" to={`/edit/${props.employee._id}`}>
-        Edit
-      </Link>{" "}
-      |
       <button
         className="btn btn-link"
         onClick={() => {
