@@ -36,7 +36,7 @@ employeeRoutes.route("/employee/:id").get(function (req, res) {
     });
 });
 
-// This section will help you create a new employee.
+// create a new employee
 employeeRoutes.route("/employee/add").post(function (req, response) {
   let db_connect = dbo.getDb();
   let myobj = {
@@ -51,7 +51,7 @@ employeeRoutes.route("/employee/add").post(function (req, response) {
   });
 });
 
-// This section will help you update a employee by id.
+// update an employee by id
 employeeRoutes.route("/update/:id").post(function (req, response) {
   let db_connect = dbo.getDb();
   let myquery = { _id: ObjectId(req.params.id) };
@@ -65,7 +65,7 @@ employeeRoutes.route("/update/:id").post(function (req, response) {
   }
 });
 
-// This section will help you delete a employee
+// delete an employee
 employeeRoutes.route("/:id").delete((req, response) => {
   let db_connect = dbo.getDb();
   let myquery = { _id: ObjectId(req.params.id) };

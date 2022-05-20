@@ -75,37 +75,36 @@ export default function Create() {
           />
         </div>
         <div className="form-group">
-          <div className="form-check ">
-            <label for="gender-select">Gender:</label>
+          <label for="gender-select">Gender:</label>
 
-            <select name="genders" id="gender-select">
-              <option value="">-- Please select gender --</option>
-              <option
-                value={form.gender}
-                name="male"
-                id="male"
-                onChange={(e) => updateForm({ gender: e.target.value })}
-              >
-                Male
-              </option>
-              <option
-                value={form.gender}
-                name="female"
-                id="female"
-                onChange={(e) => updateForm({ gender: e.target.value })}
-              >
-                Female
-              </option>
-              <option
-                value={form.gender}
-                name="preferNotToRespond"
-                id="preferNotToRespond"
-                onChange={(e) => updateForm({ gender: e.target.value })}
-              >
-                Prefer not to respond
-              </option>
-            </select>
-          </div>
+          <select name="gender"
+            id="gender-select"
+            value={form.gender}
+            onChange={(e) => updateForm({ gender: e.target.value })}
+          >
+            <option disabled value="">-- Please select gender --</option>
+            <option
+              value="male"
+              name="male"
+              id="male"
+            >
+              Male
+            </option>
+            <option
+              value="female"
+              name="female"
+              id="female"
+            >
+              Female
+            </option>
+            <option
+              value="preferNotToRespond"
+              name="preferNotToRespond"
+              id="preferNotToRespond"
+            >
+              Prefer not to respond
+            </option>
+          </select>
         </div>
         <div className="form-group">
           <input
