@@ -1,8 +1,8 @@
 ## Tech stack
 
-- [MongoDB](https://www.mongodb.com/)  [<img align="right" alt="MongoDB" width="26px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" style="padding-right:10px;" />]
+- [MongoDB](https://www.mongodb.com/)  [<img alt="MongoDB" width="26px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" style="padding-right:10px;" />]()
 - [Express](https://expressjs.com/)
-- [React](https://reactjs.org/) [<img align="right" alt="React" width="26px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" style="padding-right:10px;" />]
+- [React](https://reactjs.org/) [<img alt="React" width="26px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" style="padding-right:10px;" />]()
 - [Node.js](https://nodejs.org/en/) [<img align="right" alt="Node.js" width="26px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" style="padding-right:10px;" />]
 - [Bootstrap](https://getbootstrap.com/)
 
