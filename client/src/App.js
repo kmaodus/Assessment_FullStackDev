@@ -7,7 +7,7 @@ import { Route, Routes } from "react-router-dom";
 import Navbar from "./components/navbar";
 import EmployeesList from "./components/employeesList";
 import Create from "./components/create";
-// import Footer from "./components/Footer";
+import Footer from "./components/Footer";
  
 const App = () => {
  return (
@@ -17,7 +17,7 @@ const App = () => {
        <Route exact path="/" element={<EmployeesList />} />
        <Route path="/create" element={<Create />} />
      </Routes>
-     {/* <Footer /> */}
+     <Footer />
    </div>
  );
 };
