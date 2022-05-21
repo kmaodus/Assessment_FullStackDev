@@ -36,14 +36,33 @@ them to the database.
 
 ## Installation
 
-Download [Node.js](https://nodejs.org/) v16+ to run.
+Setup your [MongoDB Atlas cluster and database](https://www.mongodb.com/docs/atlas/getting-started/). 
+In *server/routes/employee.js* edit *MONGODB_DATABASE* and *MONGODB_COLLECTION* to represent your MongoDB cluster data.
+Add a new .env file in *server* folder that fits your MongoDB credentials. For example take a look at *server/example.env*:
 
+```sh
+ATLAS_URI = mongodb+srv://<username>:<password>@sandbox.jadwj.mongodb.net/employees?retryWrites=true&w=majority
+PORT = 5000
+MONGODB_DATABASE = "jacandoAG_assessment"
+MONGODB_COLLECTION = "employees"
+```
+
+Make sure that your [IP address is whitelisted](https://www.mongodb.com/docs/atlas/security/add-ip-address-to-list/).
+
+Download [Node.js](https://nodejs.org/) v16+ to run.
 Install the dependencies and devDependencies and start the server.
 
 ```sh
 cd server
 npm i
 node server.js
+```
+
+You should get the following message: 
+
+```sh
+Server is running on port: 5000  
+Successfully connected to MongoDB.
 ```
 
 ```sh
@@ -59,10 +78,7 @@ npm install --production
 NODE_ENV=production node app
 ```
 
-Change the URI to fit your MongoDB database.
-```sh
-ATLAS_URI=mongodb+srv://<username>:<password>@sandbox.jadwj.mongodb.net/employees?retryWrites=true&w=majority
-```
+
 
 
 ## License

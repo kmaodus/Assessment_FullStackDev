@@ -4,6 +4,8 @@ const client = new MongoClient(Db, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
+const MONGODB_DATABASE = process.env.MONGODB_DATABASE; //  "jacandoAG_assessment";
+
 
 var _db;
 
@@ -12,7 +14,7 @@ module.exports = {
     client.connect(function (err, db) {
       // Verify we got a good "db" object
       if (db) {
-        _db = db.db("jacandoAG_assessment");
+        _db = db.db(MONGODB_DATABASE);
         console.log("Successfully connected to MongoDB.");
       }
       return callback(err);
