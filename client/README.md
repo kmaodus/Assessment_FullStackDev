@@ -51,12 +51,6 @@ npm i
 npm start
 ```
 
-For production environments...
-
-```sh
-npm install --production
-NODE_ENV=production node app
-```
 
 ## Task
 Please develop an application with frontend and backend that allows you to create employees and save
