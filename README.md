@@ -12,26 +12,6 @@
 - [Git ](https://git-scm.com/downloads)[<img align="left"  alt="Git" width="26px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" style="padding-right:10px;" />](https://git-scm.com/downloads)
 - [GitHub  ](https://github.com/kmaodus)[<img align="left" align="left" alt="GitHub" width="26px" src="https://user-images.githubusercontent.com/3369400/139447912-e0f43f33-6d9f-45f8-be46-2df5bbc91289.png" style="padding-right:10px;" />](https://github.com/kmaodus)
 
-## Task
-Please develop an application with frontend and backend that allows you to create employees and save
-them to the database.
-
-## Frontend
-- Preferably you use ReactJS but any other Javascript framework or vanilla Javascript is fine too
-- There should be input fields for
-    - email
-    - first name
-    - last name
-- There should also be a dropdown that lets the user select the gender of the employee
-- By clicking the submit button, the data is sent to your backend
-- If any of the information is missing, there should be an error message and the data should not be sent
-    to the backend
-- Styling is not important but a good design is a plus
-## Backend
-- The backend should be written in NodeJS
-- Data received from the frontend should be stored in a database
-    - Preferably you use MongoDB but you can use any you like or even use an in memory store
-
 
 
 ## Installation
@@ -78,7 +58,25 @@ npm install --production
 NODE_ENV=production node app
 ```
 
+## Task
+Please develop an application with frontend and backend that allows you to create employees and save
+them to the database.
 
+## Frontend
+- Preferably you use ReactJS but any other Javascript framework or vanilla Javascript is fine too
+- There should be input fields for
+    - email
+    - first name
+    - last name
+- There should also be a dropdown that lets the user select the gender of the employee
+- By clicking the submit button, the data is sent to your backend
+- If any of the information is missing, there should be an error message and the data should not be sent
+    to the backend
+- Styling is not important but a good design is a plus
+## Backend
+- The backend should be written in NodeJS
+- Data received from the frontend should be stored in a database
+    - Preferably you use MongoDB but you can use any you like or even use an in memory store
 
 
 ## License

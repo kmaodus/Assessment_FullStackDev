@@ -7,7 +7,7 @@ import { NavLink } from "react-router-dom";
 
 export default function Navbar() {
   return (
-    <nav className="navbar navbar-light navbar-expand-md fixed-top"
+    <nav className="navbar navbar-light navbar-expand-md top"
       style={{
         "background-color": "#E1EFFF", "padding-top": "20px", "padding-left": "80px", "padding-right": "80px", "padding-bottom": "20px", "margin-bottom": "0px"
       }}>

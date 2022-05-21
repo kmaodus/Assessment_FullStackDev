@@ -4,10 +4,10 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 
 // We import all the components we need in our app
-import Navbar from "./components/Navbar";
-import EmployeesList from "./components/EmployeesList";
-import Create from "./components/Create";
-import Footer from "./components/Footer";
+import Navbar from "./components/navbar";
+import EmployeesList from "./components/employeesList";
+import Create from "./components/create";
+import Footer from "./components/footer";
 
 const App = () => {
   return (
