@@ -70,11 +70,11 @@ export default function EmployeesList() {
 
   return (
     <div className="container">
-      <section className="d-flex flex-column flex-grow-1" style={{ "padding": "0px", "margin": "95px", "height": "initial", "margin-right": "55px", "margin-left": "55px", "margin-top": "100px" }}>
+      <section className="d-flex flex-column flex-grow-1" style={{ "padding": "0px", "margin": "95px", "height": "initial", "margin-right": "55px", "margin-left": "55px", "margin-top": "2em" }}>
         <h1 className="d-flex float-start" style={{ "color": "#01273e", "padding-top": "5px", "padding-bottom": "0px" }}>List of employees</h1>
         <div className="table-responsive" style={{ "padding": "0px", "padding-top": "20px", "padding-right": "0px", "color": "#01273e" }}>
-          <table className="table table-striped table-hover">
-            <thead className="table-light">
+          <table className="table table-striped table-hover table-bordered">
+            <thead className="thead-dark">
               <tr>
                 <th>Email</th>
                 <th>First Name</th>

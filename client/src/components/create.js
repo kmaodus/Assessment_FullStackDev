@@ -40,7 +40,7 @@ export default function Create() {
 
   return (
     <div className="container">
-      <section className="d-flex flex-column flex-grow-1" style={{ "padding": "0px", "margin": "95px", "height": "initial", "margin-right": "55px", "margin-left": "55px", "margin-top": "100px" }}>
+      <section className="d-flex flex-column flex-grow-1" style={{ "padding": "0px", "margin": "95px", "height": "initial", "margin-right": "55px", "margin-left": "55px", "margin-top": "2em" }}>
         <div className="justify-content-xl-start align-items-xl-start" style={{ "height": "inherit", "margin": "0px", "margin-top": "0", "padding-top": "5px" }}>
           <h1>Create New Employee</h1>
           <form onSubmit={onSubmit}>

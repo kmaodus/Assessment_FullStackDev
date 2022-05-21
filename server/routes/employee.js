@@ -1,22 +1,17 @@
 const express = require("express");
-
-// employeeRoutes is an instance of the express router.
-// We use it to define our routes.
-// The router will be added as a middleware and will take control of requests starting with path /employee.
 const employeeRoutes = express.Router();
-
-// This will help us connect to the database
 const dbo = require("../db/conn");
-
-// This help convert the id from string to ObjectId for the _id.
 const ObjectId = require("mongodb").ObjectId;
+require("dotenv").config({ path: "./.env" });
+
+const MONGODB_DATABASE = process.env.MONGODB_DATABASE;
+const MONGODB_COLLECTION = process.env.MONGODB_COLLECTION
 
 
-// This section will help you get a list of all the employees.
 employeeRoutes.route("/employee").get(function (req, res) {
-  let db_connect = dbo.getDb("jacandoAG_assessment");
+  let db_connect = dbo.getDb(MONGODB_DATABASE);
   db_connect
-    .collection("employees")
+    .collection(MONGODB_COLLECTION)
     .find({})
     .toArray(function (err, result) {
       if (err) throw err;
@@ -24,12 +19,11 @@ employeeRoutes.route("/employee").get(function (req, res) {
     });
 });
 
-// This section will help you get a single employee by id
 employeeRoutes.route("/employee/:id").get(function (req, res) {
   let db_connect = dbo.getDb();
   let myquery = { _id: ObjectId(req.params.id) };
   db_connect
-    .collection("employees")
+    .collection(MONGODB_COLLECTION)
     .findOne(myquery, function (err, result) {
       if (err) throw err;
       res.json(result);
@@ -45,13 +39,12 @@ employeeRoutes.route("/employee/add").post(function (req, response) {
     lastName: req.body.lastName,
     gender: req.body.gender,
   };
-  db_connect.collection("employees").insertOne(myobj, function (err, res) {
+  db_connect.collection(MONGODB_COLLECTION).insertOne(myobj, function (err, res) {
     if (err) throw err;
     response.json(res);
   });
 });
 
-// update an employee by id
 employeeRoutes.route("/update/:id").post(function (req, response) {
   let db_connect = dbo.getDb();
   let myquery = { _id: ObjectId(req.params.id) };
@@ -69,7 +62,7 @@ employeeRoutes.route("/update/:id").post(function (req, response) {
 employeeRoutes.route("/:id").delete((req, response) => {
   let db_connect = dbo.getDb();
   let myquery = { _id: ObjectId(req.params.id) };
-  db_connect.collection("employees").deleteOne(myquery, function (err, obj) {
+  db_connect.collection(MONGODB_COLLECTION).deleteOne(myquery, function (err, obj) {
     if (err) throw err;
     console.log("1 document deleted");
     response.json(obj);

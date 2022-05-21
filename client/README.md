@@ -12,6 +12,52 @@
 - [Git ](https://git-scm.com/downloads)[<img align="left"  alt="Git" width="26px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" style="padding-right:10px;" />](https://git-scm.com/downloads)
 - [GitHub  ](https://github.com/kmaodus)[<img align="left" align="left" alt="GitHub" width="26px" src="https://user-images.githubusercontent.com/3369400/139447912-e0f43f33-6d9f-45f8-be46-2df5bbc91289.png" style="padding-right:10px;" />](https://github.com/kmaodus)
 
+
+
+## Installation
+
+Setup your [MongoDB Atlas cluster and database](https://www.mongodb.com/docs/atlas/getting-started/). 
+In *server/routes/employee.js* edit *MONGODB_DATABASE* and *MONGODB_COLLECTION* to represent your MongoDB cluster data.
+Add a new .env file in *server* folder that fits your MongoDB credentials. For example take a look at *server/example.env*:
+
+```sh
+ATLAS_URI = mongodb+srv://<username>:<password>@sandbox.jadwj.mongodb.net/employees?retryWrites=true&w=majority
+PORT = 5000
+MONGODB_DATABASE = "jacandoAG_assessment"
+MONGODB_COLLECTION = "employees"
+```
+
+Make sure that your [IP address is whitelisted](https://www.mongodb.com/docs/atlas/security/add-ip-address-to-list/).
+
+Download [Node.js](https://nodejs.org/) v16+ to run.
+Install the dependencies and devDependencies and start the server.
+
+```sh
+cd server
+npm i
+node server.js
+```
+
+You should get the following message: 
+
+```sh
+Server is running on port: 5000  
+Successfully connected to MongoDB.
+```
+
+```sh
+cd client
+npm i
+npm start
+```
+
+For production environments...
+
+```sh
+npm install --production
+NODE_ENV=production node app
+```
+
 ## Task
 Please develop an application with frontend and backend that allows you to create employees and save
 them to the database.
@@ -31,38 +77,6 @@ them to the database.
 - The backend should be written in NodeJS
 - Data received from the frontend should be stored in a database
     - Preferably you use MongoDB but you can use any you like or even use an in memory store
-
-
-
-## Installation
-
-Download [Node.js](https://nodejs.org/) v16+ to run.
-
-Install the dependencies and devDependencies and start the server.
-
-```sh
-cd server
-npm i
-node server.js
-```
-
-```sh
-cd client
-npm i
-npm start
-```
-
-For production environments...
-
-```sh
-npm install --production
-NODE_ENV=production node app
-```
-
-Change the URI to fit your MongoDB database.
-```sh
-ATLAS_URI=mongodb+srv://<username>:<password>@sandbox.jadwj.mongodb.net/employees?retryWrites=true&w=majority
-```
 
 
 ## License
